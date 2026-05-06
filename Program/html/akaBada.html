@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>akaBada</title>
+</head>
+<style>
+    body{
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        background-color: black;
+        
+    }
+    #snowfall-container{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        pointer-events:painted;
+        z-index:9999;
+    }
+
+    .snowflake{
+        position:absolute;
+        width:10px;
+        height:10px;
+        background-color:#fff;
+        border-radius:50%;
+        pointer-events:all;
+        animation:snowfall 2s linear infinte;
+    }
+
+      @keyframes snowfall{
+        0%{
+            top: -100px;
+        }
+            100%{
+                top:100vh;            }
+      }
+</style>
+<body>
+    <h1>Happy Christmas</h1>
+       <!-- <div id="Countdown"></div> -->
+       <div id="snowfall-container">
+            <div class="snowflake"></div>
+            <!-- <div class="snowflake1"></div>
+            <div class="snowflake2"></div> -->
+       </div>
+       <script>
+        function createSnowflakes(){
+            const snowfallContainer=document.getElementById('snowfall-container');
+            const numSniwflakes=50; //Adjust this number to control the density of snowflakes
+
+
+               for(let i=0; i<numSnowflakes;i++){
+                const snowFlake=document.createElement('div');
+                snowflake.classList.add('snowflake');
+                snowflake.style.left=Math.random()*100+'%';
+                snowflake.style.animationDelay=Math.random()*5+'s';
+                   snowfallContainer.appendChild(snowflake);
+               }
+        }
+        createSnowflakes();
+       </script>
+</body>
+</html>

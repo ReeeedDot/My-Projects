@@ -1,0 +1,44 @@
+*{
+    background:black;
+}
+.Gallary{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width:50%;
+    margin:4% 0% 0% 2%;
+}
+.Gallary img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    transition: scale 350ms ease, opacity 350ms linear;
+}
+
+.Gallary:has(img:hover) img:not(:hover){
+    scale: 0.8;
+    opacity: 0.5;
+}
+.Gallary img:hover{
+    box-shadow: 0 0 5px #ffe43f,0 0 15px #ffe43f,0 0 25px #ffe43f,0 0 100px #ffe43f;
+    cursor:pointer;
+}
+button{
+    background-color: white;
+    margin:120px;
+    padding: 5px;
+    position: relative;
+    width: 150px;
+    height:65px;
+    font-size: 25px;
+    font-weight: bold;
+    border:none;
+    margin:10% 0% 0% 4%;
+    color:black;
+    transition:all ease 0.1s;
+
+}
+button:hover{
+    -webkit-box-reflect: below 1px linear-gradient(transparent, blue );
+    box-shadow:0 0 5px #ffe43f,0 0 15px #ffe43f,0 0 25px #ffe43f,0 0 100px #ffe43f;
+    cursor:pointer ;
+}

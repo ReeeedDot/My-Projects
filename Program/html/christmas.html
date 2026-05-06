@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <link rel="stylesheet" type="text/css" href="christmasstyle.css">
+ </head>
+ <style>
+
+body{
+    text-align: center;
+    font-family:arial,sans-serif;
+    background: color #f2f2f2;
+}
+
+  h1{
+
+    background-color:linear-gradient(to right,#ff00cc,#3333ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+    /* text-fill-color:transparent; */
+
+  }
+
+  #countdown{
+    font-size:24px;
+    margin-top:20px;
+    /* color:rgb(125, 145,258 );
+    background-color:green; */
+  }
+
+ </style>
+ <body>
+      <h1>Countdown to christmas</h1>
+      <div id="Countdown"></div>
+      <script src="Cscript.js">
+
+//calculte the remaining time until the christmas
+
+function calculateTimeUntilChristmas(){
+    const now = new Date();
+    const christmas = new Date(now.getFullYear(),11,25);
+    const timeDiff= christmas-now;
+
+    //Convert the time difference to days,hours,minutes, and seconds
+    
+    const days= Math.floor(timeDiff/(1000*60*60*24));
+    const hours=Math.floor(timeDiff%(1000*60*60*24)/(1000*60*60));
+    const minutes=Math.floor(timeDiff%(1000*60)/(1000*60));
+    const seconds=Math.floor(timeDiff%(1000*60)/(1000));
+
+    //Display the countdown on the page
+
+    document.grtElementById(countdown).innerHTML='${days}d ${hours}h ${minutes}m ${seconds}s';
+
+    //update the countdown every second
+
+    setTimeout(calculateTimeUntilChristmas,1000);
+}
+// calculateTimeUntilChristmas();
+
+
+      </script>
+ </body>
+ 
+</html>

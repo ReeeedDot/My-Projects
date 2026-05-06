@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Clone</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    
+  <div class="Container">
+    <header>
+        <a href="#" class="logo">WhatsApp</a>
+        <div class="action">
+                   <a href="#"><ion-icon name="camera-outline"></ion-icon></a>
+                   <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+                   <a href="#"><ion-icon name="ellipsis-vertical"></ion-icon></a>
+        </div>
+    </header>
+    <div class="tabs">
+        <input id="Chats" type="radio" name="group" checked>
+        <input id="Status" type="radio" name="group">
+        <input id="Calls" type="radio" name="group">
+
+        <div class="buttons">
+            <label for="Chats">Chats</label>
+            <label for="Status">Status</label>
+            <label for="Calls">Calls</label>
+            <div class="underline"></div>
+        </div>
+    <div class="content">
+      <div  class="box chats">
+        <div class="data">
+          <div class="chat list">
+            <div class="block unread">
+              <div class="imgbx">
+                <img src="img1.jpg">
+              </div>
+              <div class="details">
+                <div class="listHead">
+                  <h4>Praveen</h4>
+                  <p class="time">08:30</p>
+                </div>
+                <div class="message_p">
+                  <p>Hello</p>
+                  <b>1</b>
+                </div>
+              </div>
+            </div>
+            <div class="block">
+              <div class="imgbx">
+                <img src="img2.jpg">
+              </div>
+              <div class="details">
+                <div class="listHead">
+                  <h4>Sandeep</h4>
+                  <p class="time">08:40</p>
+                </div>
+                <div class="message_p">
+                  <p>Where are you..</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box_Status">Status</div>
+        <div class="box_Calls">Calls</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+</body>
+</html>
