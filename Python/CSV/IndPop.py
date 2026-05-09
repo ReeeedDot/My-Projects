@@ -1,6 +1,6 @@
 import pandas as pd
 d= pd.read_csv(r"D:\Code\Python\CSV\india_population.csv")
-#print(d)
+print(d)
 #print(d.head(4))
 #print(d.tail(5))
 #print(d.info())
