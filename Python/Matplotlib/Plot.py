@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt    #data ko visualise krne ke liye
 
 plt.plot([1, 2, 3, 4], [1, 4, 9, 16], 'go')
 plt.axis([0, 6, 0, 20]) # type: ignore
